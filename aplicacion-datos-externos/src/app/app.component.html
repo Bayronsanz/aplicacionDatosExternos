@@ -1,0 +1,13 @@
+
+    <h1>pokemons</h1>
+    <h3>se muestra un listado de pokemons</h3>
+
+    @for (pokemons of this.pokemons.result; track pokemons) {
+      <section>
+        <a href={{pokemons.url}}><h4>{{pokemons.name}}</h4></a>
+      </section>
+    }@empty {
+      <p>no hay pokemon para mostrar</p>
+    }
+
+<router-outlet />
